@@ -1,0 +1,11 @@
+# Netlify redirects for SPA (Single Page Application)
+# This ensures all routes are handled by React Router
+
+# Handle all routes by serving index.html
+/*    /index.html   200
+
+# Optional: Redirect www to non-www (uncomment if needed)
+# https://www.darkimbeallah.com/*  https://darkimbeallah.com/:splat  301!
+
+# Optional: Force HTTPS (uncomment if needed)
+# http://darkimbeallah.com/*  https://darkimbeallah.com/:splat  301!
