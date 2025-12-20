@@ -7,14 +7,13 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-serif font-bold text-gold mb-6">
-                Darkim Be AllahChrist
+                Darkim Be Allah
               </h1>
               <p className="text-xl text-gray-300 mb-6">
-                Wu-Tang Elements Producer, 5% Teacher, Underground Legend
+                Wu-Tang Affiliate, A.I.G. Founding Member, Underground Legend
               </p>
               <p className="text-lg text-gray-400">
-                From the Bronx to the world, carrying the torch of authentic hip-hop culture 
-                and consciousness for over three decades.
+                Cerebral lyricism meets Five Percent Nation teachings — art and instruction for those who value substance over trends.
               </p>
             </div>
             <div className="text-center">
@@ -38,30 +37,105 @@ const About = () => {
             </h2>
             <div className="prose prose-lg prose-invert">
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Darkim Be AllahChrist isn't just an artist; he is a cornerstone of the NYC hip-hop foundation. 
-                From the moment he signed with Wu-Tang Records in 1996, Darkim has been delivering that gritty, 
-                soul-infused underground flavor that defines the essence of the culture.
+                Darkim Be Allah emerged from the NYC hip-hop underground during the 1990s, a time when lyricism, 
+                knowledge, and cultural identity defined the artform. As a founding member of A.I.G. and an affiliate 
+                of the Wu-Tang movement, Darkim contributed to projects that helped shape the era's raw, uncompromising sound.
               </p>
               
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                As a "Wu-Tang Elements" producer and affiliate, his pedigree is undeniable—most notably exemplified 
-                by his production of the legendary RZA solo track "Twelve Jewelz" on the Gravediggaz' second album. 
-                This wasn't just a beat; it was a statement that positioned him among the elite architects of 
-                East Coast underground hip-hop.
-              </p>
-
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                But Darkim's identity extends far beyond music production. As a 5% teacher of the Nation of Gods & Earths, 
-                he brings knowledge of self that has no birth record. His 2020 masterpiece, "Antediluvian King," 
-                is a masterclass in this philosophy. The term "Antediluvian" translates to "before the flood," 
-                a conceptual return to a time when kings were recognized as Gods.
+                Known for his cerebral lyricism and integration of Five Percent Nation teachings, Darkim's music stands 
+                as both art and instruction — addressing self-knowledge, discipline, and social awareness. Over decades 
+                of independent work, he has maintained creative control while cultivating a loyal global audience that 
+                values substance over trends.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                His writing is incredibly prescient; even when penned before the chaos of 2020, his lyrics spoke 
-                directly to the intensity of police violence, global pandemics, and worldwide civil unrest. 
-                He doesn't just rap; he applies ancient wisdom to the struggles of humanity today.
+                In recent years, Darkim has continued to release critically respected projects, collaborate with 
+                underground legends, and expand his artistic vision beyond music into teaching, storytelling, 
+                and cultural preservation.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Musical Style & Associations */}
+      <section className="section-padding bg-black">
+        <div className="container-max">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Musical Style */}
+            <div className="bg-gray-900 p-8 rounded-lg">
+              <h3 className="text-2xl font-serif font-bold text-gold mb-6 flex items-center">
+                <span className="mr-3">🎶</span> Musical Style
+              </h3>
+              <ul className="space-y-3">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Underground Hip-Hop
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Boom-Bap
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Conscious Hip Hop
+                </li>
+              </ul>
+            </div>
+
+            {/* Notable Associations */}
+            <div className="bg-gray-900 p-8 rounded-lg">
+              <h3 className="text-2xl font-serif font-bold text-gold mb-6 flex items-center">
+                <span className="mr-3">🤝</span> Notable Associations
+              </h3>
+              <ul className="space-y-3">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Wu-Tang Extended Family
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Gravediggaz
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Solomon Childs
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Planet Asia
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Tragedy Khadafi
+                </li>
+              </ul>
+            </div>
+
+            {/* Selected Discography */}
+            <div className="bg-gray-900 p-8 rounded-lg">
+              <h3 className="text-2xl font-serif font-bold text-gold mb-6 flex items-center">
+                <span className="mr-3">📀</span> Selected Discography
+              </h3>
+              <ul className="space-y-3">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Antediluvian King
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Child Famous
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Child King
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                  Wu-Tang Killa Bees – The Swarm
+                </li>
+              </ul>
             </div>
           </div>
         </div>
