@@ -1,6 +1,6 @@
 [build]
-  # Build command - install dependencies first, then build
-  command = "npm ci && npm run build"
+  # Build command - install all dependencies (including dev) then build
+  command = "npm install && npm run build"
   
   # Directory to publish (Vite builds to 'dist' by default)
   publish = "dist"
@@ -8,7 +8,6 @@
 [build.environment]
   # Environment variables for build
   NODE_VERSION = "18"
-  NODE_ENV = "production"
 
 # Headers for security and performance
 [[headers]]
