@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import antediluvianKingCoverUrl from '../../images/darkim-be-allah-x-endemic-emerald-antediluvian-king-lp.jpg'
+import FAQ from '../components/FAQ'
 
 const Home = () => {
-  const [isListenOpen, setIsListenOpen] = useState(false)
-
   return (
     <div>
       {/* Hero Section */}
