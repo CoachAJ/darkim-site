@@ -43,3 +43,8 @@
 # Form handling for Netlify Forms
 [build.processing]
   skip_processing = false
+
+# Form notifications - email submissions to famelabsmusic@gmail.com
+# Note: You must also configure this in Netlify Dashboard:
+# Site settings > Forms > Form notifications > Add notification > Email notification
+# Select the form and enter: famelabsmusic@gmail.com
