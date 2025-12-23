@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logoUrl from '../../images/Logo.PNG'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,8 +10,11 @@ const Header = () => {
       <div className="container-max">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-serif font-bold text-gold">
-            Darkim Be Allah
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logoUrl} alt="Darkim Be Allah" className="h-10 w-auto" />
+            <span className="text-2xl font-serif font-bold text-gold hidden sm:inline">
+              Darkim Be Allah
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -67,9 +71,14 @@ const Header = () => {
               <Link to="/about" className="text-white hover:text-gold transition-colors">
                 About
               </Link>
-              <Link to="/inner-circle" className="btn-primary w-fit">
+              <a 
+                href="https://www.patreon.com/cw/RandomJewels"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary w-fit"
+              >
                 Join the Inner Circle
-              </Link>
+              </a>
             </nav>
           </div>
         )}

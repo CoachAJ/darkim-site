@@ -1,14 +1,8 @@
 import { useState } from 'react'
+import antediluvianKingCoverUrl from '../../images/darkim-be-allah-x-endemic-emerald-antediluvian-king-lp.jpg'
 
 const Home = () => {
-  const [email, setEmail] = useState('')
-
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle email submission logic here
-    console.log('Email submitted:', email)
-    setEmail('')
-  }
+  const [isListenOpen, setIsListenOpen] = useState(false)
 
   return (
     <div>
@@ -22,7 +16,12 @@ const Home = () => {
             Exclusive music, wisdom, and direct access from Bronx-bred hip-hop veteran Darkim Be Allah.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/inner-circle" className="btn-primary text-lg px-8 py-4">
+            <a 
+              href="https://www.patreon.com/cw/RandomJewels"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-lg px-8 py-4"
+            >
               Join the Inner Circle
             </a>
             <button 
@@ -143,12 +142,11 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Album Cover */}
             <div className="text-center lg:text-left">
-              <div className="w-80 h-80 bg-gradient-to-br from-gold to-bronze rounded-lg mx-auto lg:mx-0 flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <h3 className="text-2xl font-serif font-bold text-black mb-2">Antediluvian King</h3>
-                  <p className="text-black/70">2020 Masterpiece</p>
-                </div>
-              </div>
+              <img
+                src={antediluvianKingCoverUrl}
+                alt="Antediluvian King album cover"
+                className="w-80 h-80 rounded-lg mx-auto lg:mx-0 mb-6 object-cover border border-gold/20"
+              />
             </div>
 
             {/* Album Info */}
@@ -166,10 +164,20 @@ const Home = () => {
                 recorded and pressed on wax via London for uncompromising quality.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#" className="btn-primary">
+                <a
+                  href="https://music.amazon.com/artists/B008B56WU8/darkim-be-allah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
                   Buy Direct
                 </a>
-                <a href="#" className="btn-secondary">
+                <a
+                  href="https://open.spotify.com/artist/1kVxIOLoDQhladQfYBIOdd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
                   Listen Now
                 </a>
               </div>
@@ -189,12 +197,17 @@ const Home = () => {
             No algorithms, no corporate interference - just direct connection to the source.
           </p>
           
-          <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto">
+          <form 
+            name="email-capture" 
+            method="POST" 
+            data-netlify="true" 
+            className="max-w-md mx-auto"
+          >
+            <input type="hidden" name="form-name" value="email-capture" />
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name="email"
                 placeholder="Enter your email"
                 required
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
@@ -210,6 +223,9 @@ const Home = () => {
           </p>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
     </div>
   )
 }
