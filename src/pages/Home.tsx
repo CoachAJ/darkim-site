@@ -198,7 +198,8 @@ const Home = () => {
           <form 
             name="email-capture" 
             method="POST" 
-            data-netlify="true" 
+            data-netlify="true"
+            action="/thank-you"
             className="max-w-md mx-auto"
           >
             <input type="hidden" name="form-name" value="email-capture" />

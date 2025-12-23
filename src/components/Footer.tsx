@@ -160,7 +160,7 @@ const Footer = () => {
 
         <div className="border-t border-gold/20 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Darkim Be Allah. All rights reserved. | Wu-Tang Elements | Fame Labs Music
+            © 2025 Darkim Be Allah. All rights reserved. | Wu-Tang Elements | Fame Labs Music
           </p>
         </div>
       </div>

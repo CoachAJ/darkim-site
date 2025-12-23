@@ -1,37 +1,4 @@
-import { useState } from 'react'
-
 const Tour = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    venue: '',
-    city: '',
-    date: '',
-    message: ''
-  })
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle booking inquiry submission
-    console.log('Booking inquiry submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      venue: '',
-      city: '',
-      date: '',
-      message: ''
-    })
-  }
-
   return (
     <div>
       {/* Hero Section */}
@@ -61,7 +28,7 @@ const Tour = () => {
                 <div className="text-center md:text-left">
                   <div className="text-2xl font-bold text-gold">MAR</div>
                   <div className="text-3xl font-bold text-white">15</div>
-                  <div className="text-gray-400">2024</div>
+                  <div className="text-gray-400">2025</div>
                 </div>
                 <div className="md:col-span-2">
                   <h3 className="text-xl font-semibold text-white mb-1">The Underground Sessions</h3>
@@ -80,7 +47,7 @@ const Tour = () => {
                 <div className="text-center md:text-left">
                   <div className="text-2xl font-bold text-gold">APR</div>
                   <div className="text-3xl font-bold text-white">02</div>
-                  <div className="text-gray-400">2024</div>
+                  <div className="text-gray-400">2025</div>
                 </div>
                 <div className="md:col-span-2">
                   <h3 className="text-xl font-semibold text-white mb-1">Knowledge & Beats Festival</h3>
@@ -99,7 +66,7 @@ const Tour = () => {
                 <div className="text-center md:text-left">
                   <div className="text-2xl font-bold text-gold">MAY</div>
                   <div className="text-3xl font-bold text-white">18</div>
-                  <div className="text-gray-400">2024</div>
+                  <div className="text-gray-400">2025</div>
                 </div>
                 <div className="md:col-span-2">
                   <h3 className="text-xl font-semibold text-white mb-1">Wu-Tang Elements Showcase</h3>
@@ -118,7 +85,7 @@ const Tour = () => {
                 <div className="text-center md:text-left">
                   <div className="text-2xl font-bold text-gold">JUN</div>
                   <div className="text-3xl font-bold text-white">22</div>
-                  <div className="text-gray-400">2024</div>
+                  <div className="text-gray-400">2025</div>
                 </div>
                 <div className="md:col-span-2">
                   <h3 className="text-xl font-semibold text-white mb-1">Antediluvian King Tour</h3>
@@ -200,7 +167,8 @@ const Tour = () => {
               Fill out the form below and we'll get back to you within 48 hours.
             </p>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form name="booking-inquiry" method="POST" data-netlify="true" action="/thank-you" className="space-y-6">
+              <input type="hidden" name="form-name" value="booking-inquiry" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -210,9 +178,7 @@ const Tour = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
+                                        required
                     className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
                     placeholder="Your name"
                   />
@@ -226,9 +192,7 @@ const Tour = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
+                                        required
                     className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
                     placeholder="your@email.com"
                   />
@@ -244,9 +208,7 @@ const Tour = () => {
                     type="text"
                     id="venue"
                     name="venue"
-                    value={formData.venue}
-                    onChange={handleInputChange}
-                    required
+                                        required
                     className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
                     placeholder="Venue or event name"
                   />
@@ -260,9 +222,7 @@ const Tour = () => {
                     type="text"
                     id="city"
                     name="city"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    required
+                                        required
                     className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
                     placeholder="City, State"
                   />
@@ -277,9 +237,7 @@ const Tour = () => {
                   type="date"
                   id="date"
                   name="date"
-                  value={formData.date}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white focus:outline-none focus:border-gold"
+                                    className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white focus:outline-none focus:border-gold"
                 />
               </div>
               
@@ -290,9 +248,7 @@ const Tour = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
+                                    rows={4}
                   className="w-full px-4 py-3 bg-black border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold"
                   placeholder="Tell us about your event, expected attendance, budget range, etc."
                 />

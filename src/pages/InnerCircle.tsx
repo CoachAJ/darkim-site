@@ -70,7 +70,7 @@ const InnerCircle = () => {
                   <span className="text-gray-300">Early access to new releases</span>
                 </li>
               </ul>
-              <button className="btn-secondary w-full">Join as Student</button>
+              <a href="https://www.patreon.com/cw/RandomJewels" target="_blank" rel="noopener noreferrer" className="btn-secondary w-full text-center block">Join as Student</a>
             </div>
 
             {/* Scholar Tier */}
@@ -102,7 +102,7 @@ const InnerCircle = () => {
                   <span className="text-gray-300">Direct message privileges</span>
                 </li>
               </ul>
-              <button className="btn-primary w-full">Join as Scholar</button>
+              <a href="https://www.patreon.com/cw/RandomJewels" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center block">Join as Scholar</a>
             </div>
 
             {/* God Tier */}
@@ -131,7 +131,7 @@ const InnerCircle = () => {
                   <span className="text-gray-300">Priority access to live events</span>
                 </li>
               </ul>
-              <button className="btn-secondary w-full">Join as God</button>
+              <a href="https://www.patreon.com/cw/RandomJewels" target="_blank" rel="noopener noreferrer" className="btn-secondary w-full text-center block">Join as God</a>
             </div>
           </div>
         </div>
@@ -182,9 +182,14 @@ const InnerCircle = () => {
             Step into a community where knowledge meets beats, where wisdom flows as freely as the music, 
             and where your support directly fuels independent artistry.
           </p>
-          <button className="btn-primary text-lg px-8 py-4">
+          <a 
+            href="https://www.patreon.com/cw/RandomJewels"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-lg px-8 py-4 inline-block"
+          >
             Start Your Journey
-          </button>
+          </a>
         </div>
       </section>
     </div>
