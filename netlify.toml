@@ -40,13 +40,6 @@
   to = "/index.html"
   status = 200
 
-# Optional: Form handling (if you want to use Netlify Forms)
-# Uncomment and configure if you want to use Netlify's form handling for contact forms
-# [build.processing]
-#   skip_processing = false
-# [build.processing.css]
-#   bundle = true
-#   minify = true
-# [build.processing.js]
-#   bundle = true
-#   minify = true
+# Form handling for Netlify Forms
+[build.processing]
+  skip_processing = false
