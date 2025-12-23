@@ -1,3 +1,5 @@
+import darkimImageUrl from '../../images/Darkim image.jpg'
+
 const About = () => {
   return (
     <div>
@@ -17,12 +19,11 @@ const About = () => {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-80 h-80 bg-gradient-to-br from-gold to-bronze rounded-lg mx-auto flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl text-black mb-4">👑</div>
-                  <p className="text-black font-semibold">Antediluvian King</p>
-                </div>
-              </div>
+              <img 
+                src={darkimImageUrl} 
+                alt="Darkim Be Allah - Wu-Tang Affiliate and Underground Hip-Hop Legend"
+                className="w-80 h-80 object-cover rounded-lg mx-auto border-2 border-gold/30 shadow-2xl"
+              />
             </div>
           </div>
         </div>
